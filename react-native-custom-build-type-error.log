@@ -1,0 +1,89 @@
+> npx react-native run-android --mode=myRelease --verbose
+warn Multiple Podfiles were found: ios/Podfile,vendor/bundle/ruby/2.7.0/gems/cocoapods-core-1.12.0/lib/cocoapods-core/Podfile. Choosing ios/Podfile automatically. If you would like to select a different one, you can configure it via "project.ios.sourceDir". You can learn more about it here: https://github.com/react-native-community/cli/blob/master/docs/configuration.md
+info JS server already running.
+info Installing the app...
+debug Running command "cd android && ./gradlew app:installMyRelease -PreactNativeDevServerPort=8081"
+5 actionable tasks: 5 up-to-date
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not determine the dependencies of task ':app:mergeDexMyRelease'.
+> Could not resolve all task dependencies for configuration ':app:myReleaseRuntimeClasspath'.
+   > Could not resolve com.facebook.react:react-android.
+     Required by:
+         project :app
+      > No matching variant of com.facebook.react:react-android:0.71.4 was found. The consumer was configured to find a runtime of a component, preferably optimized for Android, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease', attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '7.3.1' but:
+          - Variant 'debugVariantDefaultApiPublication' capability com.facebook.react:react-android:0.71.4:
+              - Incompatible because this component declares an API of a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' and the consumer needed a runtime of a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'debugVariantDefaultRuntimePublication' capability com.facebook.react:react-android:0.71.4 declares a runtime of a component:
+              - Incompatible because this component declares a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' and the consumer needed a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'debugVariantDefaultSourcePublication' capability com.facebook.react:react-android:0.71.4 declares a runtime of a component:
+              - Incompatible because this component declares a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' and the consumer needed a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'releaseVariantDefaultApiPublication' capability com.facebook.react:react-android:0.71.4:
+              - Incompatible because this component declares an API of a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release' and the consumer needed a runtime of a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'releaseVariantDefaultRuntimePublication' capability com.facebook.react:react-android:0.71.4 declares a runtime of a component:
+              - Incompatible because this component declares a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release' and the consumer needed a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'releaseVariantDefaultSourcePublication' capability com.facebook.react:react-android:0.71.4 declares a runtime of a component:
+              - Incompatible because this component declares a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release' and the consumer needed a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+   > Could not resolve com.facebook.react:hermes-android.
+     Required by:
+         project :app
+      > No matching variant of com.facebook.react:hermes-android:0.71.4 was found. The consumer was configured to find a runtime of a component, preferably optimized for Android, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease', attribute 'com.android.build.api.attributes.AgpVersionAttr' with value '7.3.1' but:
+          - Variant 'debugVariantDefaultApiPublication' capability com.facebook.react:hermes-android:0.71.4:
+              - Incompatible because this component declares an API of a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' and the consumer needed a runtime of a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'debugVariantDefaultRuntimePublication' capability com.facebook.react:hermes-android:0.71.4 declares a runtime of a component:
+              - Incompatible because this component declares a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' and the consumer needed a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'debugVariantDefaultSourcePublication' capability com.facebook.react:hermes-android:0.71.4 declares a runtime of a component:
+              - Incompatible because this component declares a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'debug' and the consumer needed a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'releaseVariantDefaultApiPublication' capability com.facebook.react:hermes-android:0.71.4:
+              - Incompatible because this component declares an API of a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release' and the consumer needed a runtime of a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'releaseVariantDefaultRuntimePublication' capability com.facebook.react:hermes-android:0.71.4 declares a runtime of a component:
+              - Incompatible because this component declares a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release' and the consumer needed a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+          - Variant 'releaseVariantDefaultSourcePublication' capability com.facebook.react:hermes-android:0.71.4 declares a runtime of a component:
+              - Incompatible because this component declares a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'release' and the consumer needed a component, as well as attribute 'com.android.build.api.attributes.BuildTypeAttr' with value 'myRelease'
+              - Other compatible attributes:
+                  - Doesn't say anything about com.android.build.api.attributes.AgpVersionAttr (required '7.3.1')
+                  - Doesn't say anything about its target Java environment (preferred optimized for Android)
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 2s
